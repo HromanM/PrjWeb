@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC>
+<html lang="cs-cz">
+  <!--*******************************************************-->
+  <!-- HEAD -->
+  <!--*******************************************************-->
+  <head>
+    <base href="/localhost" />
+    <meta charset="utf-8" />
+    <title><?= $title ?></title>
+    <meta name="description" content="<?= $description ?>" />
+    <meta name="keywords" content="<?= $key_words ?>" />
+    <link rel="stylesheet" href="MSRWeb_Style.css" type="text/css" />    
+  </head>
+  
+  <!--*******************************************************-->
+  <!-- BODY -->
+  <!--*******************************************************-->
+  <body>
+       
+    <!--*************************-->
+    <!-- Tittle -->
+    <header>
+      <h1> 
+        <b>MSR MES System</b> 
+      </h1>
+    </header>  
+      
+    <article> 
+      <div id="atricleCenter">
+    
+        <!--*************************-->
+        <!-- Headder - routing -->
+        <header>
+          <nav>
+            <ul>
+              <?php $this->controller->ctrlWriteRefs(); ?>  
+            </ul>
+          </nav>
+        </header>      
+          
+        <!--*************************-->
+        <!-- Main body -->   
+        <section>  
+        
+          <?php $this->controller->ctrlWriteView(); ?>
+     
+        </section>  <div class="floatCleaner"></div>
+      </div>    
+    </article>   
+      
+    <footer>
+        <?php
+          $this->controller->ctrlWriteVisits();
+        ?>     
+    </footer>    
+  </body>
+</html>
