@@ -34,13 +34,13 @@ abstract class Controller
         {
             for ($idx=0; $idx<count($this->references); $idx++)
             {
+                echo('<a href="' . $this->references[$idx] . '">');
                 if ($idx==$this->activeRef)
                   echo('<li class="ActiveScreen">');
                 else
-                  echo('<li>')  ;
-                echo('<a href="' . $this->references[$idx] . '">');               
+                  echo('<li>')  ;      
                 echo($this->refNames[$idx]);
-                echo(' </a> </li>');
+                echo('</li> </a>');
             }  
         }
         
