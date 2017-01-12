@@ -17,6 +17,8 @@ class RouterController extends Controller
           else
             $this->ctrlRedirect('Error');
           
+          $this->controller->data['ovenIndex'] = 
+                  $this->selectOvenIndex($params[0]);
           $this->controller->ctrlProcess($parsedURL);
           $this->data['title'] = $this->controller->header['title'];
           $this->data['description'] = $this->controller->header['description'];
@@ -31,6 +33,15 @@ class RouterController extends Controller
           $parsedURL["path"] = trim($parsedURL["path"]);
           $separPath = explode("/", $parsedURL["path"]);
           return $separPath;
+        }
+        
+        private function selectOvenIndex($url)
+        {
+          $ovenIdx = explode("?", $url);
+          if (count($ovenIdx)<2)
+            return 0;
+          else
+            return $ovenIdx[1];
         }
 
         private function convertToCamel($text)
