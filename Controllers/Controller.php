@@ -29,17 +29,17 @@ abstract class Controller
           exit;
         }
         
+        // write references to html page
         public function ctrlWriteRefs()
         {
             for ($idx=0; $idx<count($this->references); $idx++)
             {
                 if ($idx==$this->activeRef)
-                  echo('<li "class="ActiveScreen">');
+                  echo('<li class="ActiveScreen">');
                 else
                   echo('<li>')  ;
-                echo('<a href="' . $this->references[$idx] . '">');
-                //if ($idx<count($this->refNames))
-                  echo($this->refNames[$idx]);
+                echo('<a href="' . $this->references[$idx] . '">');               
+                echo($this->refNames[$idx]);
                 echo(' </a> </li>');
             }  
         }
