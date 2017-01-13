@@ -12,9 +12,20 @@ class Oven_MainController extends Controller
 
         $this->view = 'Oven_Main';
         
+        $this->data['ovenState'] = '?';
+        $this->data['actTemp'] = '?';
+        $this->data['reqTemp'] = '?';
+        $this->data['stepTemp'] = '?';
+        $this->data['actPower'] = '?';
+        $this->data['actDurH'] = '?';
+        $this->data['actDurM'] = '?';
+        $this->data['actPowerTime'] = '?';     
+        
         $this->activeRef = 0;
-        $this->references = array('Oven_Main', 'Main');
-        $this->refNames = array('Pec - hlavní', 'Hlavní obrazovka');
+        $this->references = array('Oven_Main', 'Oven_ProgInfo',
+                'Oven_Control', 'Main');
+        $this->refNames = array('Pec - hlavní', 'Program',
+                'Ovládání', 'Hlavní obrazovka');
     }
 }
 
