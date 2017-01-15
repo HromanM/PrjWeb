@@ -1,0 +1,43 @@
+<!--*******************************************************-->
+<!-- BODY -->
+<!--*******************************************************-->
+        
+<!--*************************-->
+  <!-- Table 1 - ovens main screen -->
+          <table class="valueTable">       
+            <!-- Table 1, Row1 -->
+            <tr>    
+              <td> <strong>Aktuální čas:</strong> </td> 
+              <td> </td>
+              <td> <span class="valWindow"><?= $actDateTime ?></span> </td>         
+            </tr>    
+            
+            <tr>    
+              <td> <strong>Pec status:</strong> </td>
+              <td> </td> 
+              <td> <span class="valWindow"><?= $ovenState ?></span> </td>      
+            </tr>    
+          </table>
+          <br />
+          <form method="POST">
+              <ul class="form-style">
+                <li> Program:  </li>
+                <li><select name="prgName" size="1">
+                  <?php $this->writeProgramNames(); ?> </select>
+                </li>   
+             
+                <li>Odložený start (hod,min): </li> 
+                <li>
+                  <input type="number" name="prgDelayH" />  
+                  <input type="number" name="prgDelayM" /> 
+                </li>
+            
+                <li>
+                  <input type="submit" value="Start" name="prgStart" />
+                  <input type="submit" value="Stop" name="prgStop" /> 
+                </li> 
+            </ul> 
+          </form>
+ 
+      
+                

@@ -4,7 +4,7 @@ mb_internal_encoding("UTF-8");
 // automatic class loading
 function autoloadFc($class)
 {
-        // KonÄÃ­ nÃ¡zev tÅ™Ã­dy Å™etÄ›zcem "Kontroler" ?
+        // Konèí název tøídy øetìzcem "Kontroler" ?
         if (preg_match('/Controller/', $class))
                 require("Controllers/" . $class . ".php");       
         else
@@ -21,5 +21,3 @@ $router->ctrlProcess(array($_SERVER['REQUEST_URI']));
 $router->ctrlWriteView();
 
 ?>
-
-                                                                 

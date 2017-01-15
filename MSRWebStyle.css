@@ -140,6 +140,43 @@ table a {
     display: inline-block;
     text-align: center;
 }
+
+table td {
+    font-weight: bolder;
+    font-size:16px;
+    padding : 2px 5px 2px 20px;
+}
+
+/*oven_control.phtml*/
+.form-style{
+    font-weight: bolder;
+    font-size:16px;
+    margin:3px auto;
+    padding: 20px 12px 10px 20px;
+}
+
+.form-style li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+.form-style input[type=number],
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+
 /*********************************************************************/
 
 

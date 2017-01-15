@@ -34,7 +34,13 @@ abstract class Controller
         {
             for ($idx=0; $idx<count($this->references); $idx++)
             {
-                echo('<a href="' . $this->references[$idx] . '">');
+                if (array_key_exists("ovenIndex",  $this->data))
+                {
+                  echo('<a href="' . $this->references[$idx] . '?ovenIndex=' 
+                    . $this->data['ovenIndex'] . '">');
+                } 
+                else
+                  echo('<a href="' . $this->references[$idx] . '">');
                 if ($idx==$this->activeRef)
                   echo('<li class="ActiveScreen">');
                 else

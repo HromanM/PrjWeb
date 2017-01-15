@@ -37,11 +37,12 @@ class RouterController extends Controller
         
         private function selectOvenIndex($url)
         {
-          $ovenIdx = explode("?", $url);
-          if (count($ovenIdx)<2)
-            return 0;
+          if (array_key_exists("ovenIndex", $_GET))
+            return $_GET['ovenIndex'];
+          elseif (array_key_exists("ovenIndex",  $this->controller->data))
+            return  $this->controller.data['ovenIndex'];
           else
-            return $ovenIdx[1];
+            return 0;  
         }
 
         private function convertToCamel($text)
